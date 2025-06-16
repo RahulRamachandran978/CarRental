@@ -1,3 +1,14 @@
+:root{
+  --primary-text:#000;
+  --secondary-text:#0d6efd;
+}
+a{
+  text-decoration: none;
+}
+.cursor{
+  cursor: pointer;
+}
+
 .login-container{
   height: 100vh;
   display: flex;
@@ -12,7 +23,7 @@
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px;
 }
 
 .login-form h2 {
@@ -47,4 +58,57 @@
 .loginSpan{
   color: blue;
   cursor: pointer;
+}
+.logo-sec img{
+  height: 40px;
+}
+.logo-sec a{
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-items{
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--secondary-text);
+}
+.nav-btn button{
+  font-size: 15px;
+  font-weight: 500;
+}
+.hero-text h2{
+  font-size: 50px;
+  font-weight: 600;
+}
+.hero-text span{
+  color: var(--secondary-text);
+}
+.hero-text p{
+  font-size: 15px;
+}
+.hero-img {
+  object-fit: contain;
+}
+@media (min-width: 992px) {
+  .hero-img-sec img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+}
+.custom-icon {
+  font-size: 32px;
+  color: #0d6efd;
+}
+.btn-style{
+  padding: 7px 30px 7px 30px !important;
 }

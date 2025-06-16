@@ -27,7 +27,7 @@ const Login = () => {
             <input type='email' placeholder='Gmail'  required/>
             <input type='password' placeholder='Password'  required/>
             <button type='submit'>{isRegistered ? 'Login' : 'Sign Up'}</button>
-            <p>
+            <p className='mt-2 d-flex gap-2'>
                 {isRegistered ? "Dont have an account ?" : "Already have an account ?"}{''}
                 <span className='loginSpan' onClick={handleToggle}>{isRegistered ? 'Sign Up' : 'Login'}</span>
             </p>
