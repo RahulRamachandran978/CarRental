@@ -2,6 +2,20 @@
   --primary-text:#000;
   --secondary-text:#0d6efd;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.capital-text{
+  text-transform: uppercase;
+}
+.fw-700{
+  font-weight: 700;
+}
+.gap-15{
+  gap: 15rem;
+}
 a{
   text-decoration: none;
 }
@@ -111,4 +125,81 @@ a{
 }
 .btn-style{
   padding: 7px 30px 7px 30px !important;
+}
+/* Mobile menu (offcanvas style) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+}
+
+.mobile-menu.show {
+  right: 0;
+}
+
+.mobile-menu .nav-items {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Optional: Hide scroll when menu is open */
+body.offcanvas-open {
+  overflow: hidden;
+}
+
+.btn-head{
+    background: #ddddff !important;
+    border: none !important;
+    color: var(--secondary-text) !important;
+}
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px; /* Adjust this based on item size */
+  margin: 0 2rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.logo-font{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary-text);
 }
