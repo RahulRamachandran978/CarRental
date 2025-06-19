@@ -33,7 +33,7 @@ const Detail = () => {
     <>
     <div className="container text-center bg-light py-5" id='howitwork'>
       <button className="btn mb-3 btn-head capital-text">How it works</button>
-      <h2 className="fw-bold">Rent with following <span className="text-primary">3 working steps</span></h2>
+      <h1 className="fw-bold">Rent with following <span className="text-primary">3 working steps</span></h1>
       
       <div className="row mt-5">
         {steps.map((step, idx) => (

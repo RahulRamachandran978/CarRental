@@ -6,6 +6,7 @@ import { FaArrowTurnUp } from "react-icons/fa6";
 import '../index.css'
 import Detail from '../components/ui/Detail';
 import Choose from '../components/ui/Choose';
+import PopularDeals from '../components/ui/PopularDeals';
 const Home = () => {
 
   const [showTopBtn ,setShowTopBtn] = useState(false);
@@ -85,6 +86,7 @@ const Home = () => {
       </div>
       <Detail />
       <Choose />
+      <PopularDeals />
 
       {showTopBtn && (
         <button className="scroll-top-btn" onClick={scrollToTop}>

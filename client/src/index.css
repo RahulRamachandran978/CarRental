@@ -248,3 +248,19 @@ color: blue;
     transform: translateY(-6px);
   }
 }
+.popular-card{
+  width:300px;
+}
+.card-img-top-wrapper {
+  height: 180px; /* fixed height for all images */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
