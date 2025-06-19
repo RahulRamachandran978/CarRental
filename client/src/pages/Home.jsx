@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navabar from '../components/Navabar'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import { FaArrowTurnUp } from "react-icons/fa6";
 import '../index.css'
 import Detail from '../components/ui/Detail';
+import Choose from '../components/ui/Choose';
 const Home = () => {
+
+  const [showTopBtn ,setShowTopBtn] = useState(false);
+  
+
+  useEffect(()=>{
+    const handleScroll = ()=>{
+      if(window.scrollY >300){
+        setShowTopBtn(true);
+      }else{
+        setShowTopBtn(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  },[]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
      <>
         <div className="container-fluid min-vh-100 d-flex flex-column p-0" id='hero'>
@@ -63,6 +84,13 @@ const Home = () => {
         </div>
       </div>
       <Detail />
+      <Choose />
+
+      {showTopBtn && (
+        <button className="scroll-top-btn" onClick={scrollToTop}>
+        <FaArrowTurnUp size={30} className="bounce-icon" /> 
+        </button>
+      )}
      </>
   )
 }

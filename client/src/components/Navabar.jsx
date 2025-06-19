@@ -9,7 +9,7 @@ import { Offcanvas } from 'bootstrap';
 const navItems = [
     {name:"Home",href:"#hero"},
     {name:"How it Work",href:"#howitwork"},
-    {name:"Why choose us",href:"#hero"}
+    {name:"Why choose us",href:"#chooseus"}
 ]
 const Navabar = () => {
     const [isUser,setIsUser] = useState(false);
