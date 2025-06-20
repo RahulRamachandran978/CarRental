@@ -7,6 +7,8 @@ import '../index.css'
 import Detail from '../components/ui/Detail';
 import Choose from '../components/ui/Choose';
 import PopularDeals from '../components/ui/PopularDeals';
+import Testimonal from '../components/ui/Testimonal';
+import Footer from '../components/ui/Footer';
 const Home = () => {
 
   const [showTopBtn ,setShowTopBtn] = useState(false);
@@ -87,7 +89,8 @@ const Home = () => {
       <Detail />
       <Choose />
       <PopularDeals />
-
+      <Testimonal />
+      <Footer />
       {showTopBtn && (
         <button className="scroll-top-btn" onClick={scrollToTop}>
         <FaArrowTurnUp size={30} className="bounce-icon" /> 
