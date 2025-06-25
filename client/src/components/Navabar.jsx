@@ -5,11 +5,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { href, useNavigate } from 'react-router-dom';
 import { Offcanvas } from 'bootstrap';
+import ThemeToggle from './ui/ThemeToggle';
 
 const navItems = [
     {name:"Home",href:"#hero"},
     {name:"How it Work",href:"#howitwork"},
-    {name:"Why choose us",href:"#chooseus"}
+    {name:"Why choose us",href:"#chooseus"},
+    {name:"Popular Deals",href:"#popular-deals"},
+    {name:"Testimonials",href:"#testimonials"},
+    
 ]
 const Navabar = () => {
     const [isUser,setIsUser] = useState(false);
@@ -41,11 +45,12 @@ const Navabar = () => {
                     {navItems.map((item,key)=>(
                         <a key={key} href={item.href} className='nav-items'>{item.name}</a>
                     ))}
+                    {/* <ThemeToggle /> */}
                 </div>
                 {/* Desktop Auth Button  */}
                 <div className='d-none d-lg-flex gap-3 nav-btn'>
                     {!isUser && (
-                        <button type='button' className='btn btn-primary btn-style' onClick={handleAuthClick}>{isUser ? 'Logout' : 'Login'}</button>
+                        <button type='button' className='btn btn-style' onClick={handleAuthClick}>{isUser ? 'Logout' : 'Login'}</button>
                     )}
                 </div>
                 {/* Mobile Menu icon */}

@@ -9,6 +9,7 @@ import Choose from '../components/ui/Choose';
 import PopularDeals from '../components/ui/PopularDeals';
 import Testimonal from '../components/ui/Testimonal';
 import Footer from '../components/ui/Footer';
+
 const Home = () => {
 
   const [showTopBtn ,setShowTopBtn] = useState(false);
@@ -79,7 +80,7 @@ const Home = () => {
                 </div>
                 {/* Search Button */}
                 <div className="col-12 col-md-auto">
-                  <button className="btn btn-primary btn-search w-100 w-md-auto btn-style">Search</button>
+                  <button className="btn btn-search w-100 w-md-auto btn-style">Search</button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,8 @@
 :root{
   --primary-text:#000;
-  --secondary-text:#0d6efd;
+  --secondary-text:#2478f7;
+  --text-white:#fff;
+  --btn-hover:#122f5a;
 }
 *{
   margin: 0;
@@ -137,6 +139,13 @@ a{
 }
 .btn-style{
   padding: 7px 30px 7px 30px !important;
+  background: var(--secondary-text) !important;
+  border: none !important;
+  color: var(--text-white) !important;
+}
+.btn-style:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--btn-hover) !important;
 }
 /* Mobile menu (offcanvas style) */
 .mobile-menu {
@@ -279,4 +288,14 @@ color: blue;
 .footer-list {
   list-style: none;
   padding-left: 0;
+}
+.border{
+  border-color: #54575a !important;
+}
+.underline{
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.carousel-item{
+  margin: 0 !important;
 }

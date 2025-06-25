@@ -5,6 +5,7 @@ import { MdOutlineAcUnit } from "react-icons/md";
 import { GiCarDoor } from "react-icons/gi";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const popularItems = [
     {name:"Swift", image:"/items/item1.png",price:"900",passagers:"4",type:"Auto",door:"4"},
@@ -14,6 +15,11 @@ const popularItems = [
 ]
 
 const PopularDeals = () => {
+
+  const navigate = useNavigate();
+  const carDetail = (car)=>{
+    navigate('/car-detail',{state:{car}});
+  }
   return (
     <div className='container py-5 bg-light' id='popular-deals'>
       <div className='text-center'>
@@ -52,7 +58,7 @@ const PopularDeals = () => {
                   </div>
                   <h6 className='card-text text-muted'>Price per day: ₹ {item.price}</h6>
                 </div>
-                <button className='btn btn-primary mt-3'> Rent Now <FaLongArrowAltRight size={18}/></button>
+                <button className='btn btn-style mt-3' onClick={()=>carDetail(item)}> Rent Now <FaLongArrowAltRight size={18}/></button>
               </div>
             </div>
           </div>
