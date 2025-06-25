@@ -5,7 +5,21 @@ import Stack from '@mui/material/Stack';
 const testimonials = [
     {stars:"⭐⭐⭐⭐⭐",review:"“I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.”",name:"Remya",designation:"Doctor",userImg:"/static/images/avatar/1.jpg"},
     {stars:"⭐⭐⭐⭐",review:"““I have been using your services for 3 years. Your service is great, I will continue to use your service.”",name:"Vivek",designation:"Software Engineer",userImg:"/static/images/avatar/2.jpg"},
-    {stars:"⭐⭐⭐⭐⭐",review:"“I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.”",name:"Surya",designation:"Mechanic",userImg:"/static/images/avatar/3.jpg"}
+    {stars:"⭐⭐⭐⭐⭐",review:"“I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.”",name:"Surya",designation:"Mechanic",userImg:"/static/images/avatar/3.jpg"},
+    {
+    stars: "⭐⭐⭐⭐",
+    review: "“Safe rides and fast pickups!”",
+    name: "Arjun",
+    designation: "Teacher",
+    userImg: "/static/images/avatar/5.jpg",
+  },
+  {
+    stars: "⭐⭐⭐⭐⭐",
+    review: "“Best in town service!”",
+    name: "Kiran",
+    designation: "Chef",
+    userImg: "/static/images/avatar/6.jpg",
+  },
 ]
  
 const Testimonal = () => {
@@ -13,7 +27,7 @@ const Testimonal = () => {
     const [currentIndex , setCurrentIndex] = useState(0);
 
   return (
-    <div className='container py-5'>
+    <div className='container py-5' id='testimonials'>
       <div className='text-center'>
         <button className='btn mb-5 btn-head text-uppercase'>Testimonials</button>
         <h1 className='fw-bold'>What peole say <span className='text-primary'>about us?</span></h1>

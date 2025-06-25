@@ -12,7 +12,7 @@ const navItems = [
     {name:"How it Work",href:"#howitwork"},
     {name:"Why choose us",href:"#chooseus"},
     {name:"Popular Deals",href:"#popular-deals"},
-    {name:"Testimonials",href:"#testimonials"},
+    {name:"Testimonials",href:"#testimonials"}, 
     
 ]
 const Navabar = () => {
